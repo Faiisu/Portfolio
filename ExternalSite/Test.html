@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box-left-mini{
+    float:left;
+    background-image:url(website-content/hotcampaign.png);
+    width:292px;
+    height:141px;
+}
+
+.box-left-mini .front {
+    display: block;
+    z-index: 5;
+    position: relative;
+}
+.box-left-mini .front span {
+    background: #fff
+}
+
+.box-left-mini .behind_container {
+    background-color: #ff0;
+    position: relative;
+    top: -18px;
+}
+.box-left-mini .behind {
+    display: block;
+    z-index: 3;
+}
+    </style>
+</head>
+<body>
+    <div class="box-left-mini">
+        <div class="front"><span>this is in front</span></div>
+        <div class="behind_container">
+            <div class="behind">behind</div>        
+        </div>
+    </div>
+</body>
+</html>
