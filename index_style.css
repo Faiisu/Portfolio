@@ -1,0 +1,104 @@
+*{
+    border-radius: 0.5vw;
+}
+
+body{
+    height: 10000px;
+}
+
+.space{
+    height: 5vw;
+    width: 100%;
+}
+
+.borderImg{
+    border: 5px solid green;
+    width: 500px;
+    padding:0px;
+}
+
+.blocPage{
+    text-align: center;
+    padding: 0vw;
+    margin: 0vw;
+    font-size: x-large;
+    width: 20px;
+    display: inline-block;
+}
+
+#box_container_2{
+    border: 1px solid rgba(255, 255, 255, 0.533);
+    background-color: rgb(173, 184, 173);
+    margin: 5vw;
+    margin-top:0;
+    padding: 0.5%;
+    font-size: 100%;
+    height: 70vh;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.blocGameList{
+    background-color: #AEBDCA;
+    height: auto;
+    text-align: center;
+    padding: 0px;
+    margin-right: 0.1%;
+    margin-top: 1%;
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    display: inline;
+    width: 250px;
+    /* height: 100%; */
+    overflow: hidden;
+    vertical-align:top;
+    display: inline-block;
+}
+
+.imgbox{
+    /* border: 2px solid black; */
+    width: auto;
+    height: 30vh;
+    margin-right: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.textbox{
+    border: 1px solid black;
+    width: auto;
+    height: 150px;
+    margin-top: 0.3vw;
+    margin-right: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align:left;
+    font-size: 14px;
+    padding: 0.5vw;
+}
+
+h3{
+    font-size: smaller;
+    margin:0.3vw;
+}
+
+h4{
+    font-size: smaller;
+    padding:0px;
+    margin: 0.3vw;
+}
+
+#box_containGameList{
+    background-color: #7895B2;
+    border: 2px solid black;
+    margin: 2vw;
+    height: 70vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
