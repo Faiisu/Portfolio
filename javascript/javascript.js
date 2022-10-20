@@ -8,5 +8,9 @@ window.addEventListener('scroll', () => {
 })
 
 function movePageto(){
+    for(var i = 0 ; i < Profile.scrollHeight-(793-755); i++){
+        window.scrollTo(0, i);
+    
+    }
     window.scrollTo(0, Profile.scrollHeight-(793-755));
 }
