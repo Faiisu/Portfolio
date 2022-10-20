@@ -1,9 +1,26 @@
-let scrollInfo = document.querySelector('#scrolltrack');
+let scrollInfo = document.querySelector("#scrolltrack");
+let scrollTrack = document.getElementById("pageTracker");
+let SelectContant = document.getElementById("SelectContant");
+let name_header = document.getElementById("name_header");
 
-window.addEventListener('scroll', () => {
-    let infoText = 'X = ' + window.scrollX;
-    infoText += ', Y = ' + window.scrollY;
-    scrollInfo.innerHTML = infoText;
+function getWidth() {
+    return Math.max(
+        document.body.offsetWidth,
+    );
+}
+
+function getHeight() {
+    return Math.max(
+        document.body.offsetHeight,
+    );
+}
+  
+console.log('Width:  ' +  getWidth() );
+console.log('Height: ' + getHeight() );
+
+window.addEventListener("scroll", function(){
+    // console.log(window.scrollY/(document.body.scrollHeight-770) * getWidth());
+    scrollTrack.style.width = window.scrollY/(document.body.scrollHeight-770) * getWidth() + "px";    
 })
 
 function movePageto(moveto){
@@ -13,6 +30,5 @@ function movePageto(moveto){
     else if(moveto=='move3') moveto = 2325.60009765625;
     window.scroll({
         top: moveto,
-        behavior:'smooth'
     })
 }

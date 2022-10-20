@@ -3,6 +3,7 @@
     margin: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -16,6 +17,12 @@ header{
     height: 50px;
     text-align: center;
     position:fixed;
+}
+
+#pageTracker{
+    height: 5px;
+    background-color:black;
+    position: fixed;
 }
 
 #SelectContant{
