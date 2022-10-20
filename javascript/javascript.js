@@ -1,20 +1,12 @@
-const logo = document.getElementById("startText");
+let scrollInfo = document.querySelector('#scrolltrack');
+let Profile = document.querySelector("#MyProfile");
 
-const sleep = async (miliiseconds) =>{
-    await new Promise(resolve => {
-        return setTimeout(resolve,milliseconds);
-    })
-}
+window.addEventListener('scroll', () => {
+    let infoText = 'X = ' + window.scrollX;
+    infoText += ', Y = ' + window.scrollY;
+    scrollInfo.innerHTML = infoText;
+})
 
-const testSleep = async () => {
-    console.log('Step 1 - Called');
-    await sleep(5000);
-    console.log('Step 2 - Called');
-}
-
-
-
-function LOGO_out(){
-    testSleep();
-    logo.remove();
+function movePageto(){
+    window.scrollTo(0, Profile.scrollHeight-(793-755));
 }
