@@ -9,15 +9,15 @@
     <body>
         <header>
             <div ID="SelectContant">
-                <div>
+                <div style="width:20%;" id="scrolltrack">
                     SUKUM DECHA
                </div>
                 <div ID="middle_in_header">
-                    <button class="blocOnHeader"  onclick="movePageto()">MY PROFILE</button>
-                    <button class="blocOnHeader"  href="page2.html">ACTIVITY</button>
-                    <button class="blocOnHeader"  href="page2.html">CERTIFICATE</button>
+                    <button id="move1" class="blocOnHeader"  onclick="movePageto(this.id)" >MY PROFILE</button>
+                    <button id="move2" class="blocOnHeader"  onclick="movePageto(this.id)">ACTIVITY</button>
+                    <button id="move3" class="blocOnHeader"  onclick="movePageto(this.id)" >CERTIFICATE</button>
                </div>
-               <div>
+               <div style="width:20%;">
                     CONTRACT
                 </div>   
             </div>
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div id="MyProfile">
+        <div class="segment" id ="MyProfile">
             <div id="MyProfile_container">
                 <div id="profile_leftside">
                 
@@ -45,6 +45,37 @@
             </div>
         </div>
 
+        <div class="segment" id="Activity">
+            <div id="MyProfile_container">
+                <div id="profile_leftside">
+                
+                </div>
+                <div id="profile_rightside">
+                    <div id="profile_rightside_up">
+                        
+                    </div>
+                    <div id="profile_rightside_down">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="segment" id="Certificate">
+            <div id="MyProfile_container">
+                <div id="profile_leftside">
+                
+                </div>
+                <div id="profile_rightside">
+                    <div id="profile_rightside_up">
+                        
+                    </div>
+                    <div id="profile_rightside_down">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="javascript/javascript.js" ></script>
     </body>
 </html>

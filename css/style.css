@@ -8,11 +8,12 @@
 body{
     background-color: rgb(250, 216, 172);
     height: 10000px;
+    overflow-x: hidden;
 }
 
 header{
     width: 100vw;
-    height: 7vh;
+    height: 50px;
     text-align: center;
     position:fixed;
 }
@@ -36,7 +37,7 @@ header{
 
 .container{
     background-color: rgb(250, 216, 172);
-    height: 100vh;
+    height: 720px;
     text-align: center;
     align-items: center;
     display: flex;
@@ -75,7 +76,7 @@ header{
     background-color: rgb(250, 216, 172);
 }
 
-#MyProfile{
+.segment{
     height: 100vh;
     padding:1rem;
     padding-top:2rem;

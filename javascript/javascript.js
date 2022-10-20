@@ -1,5 +1,4 @@
 let scrollInfo = document.querySelector('#scrolltrack');
-let Profile = document.querySelector("#MyProfile");
 
 window.addEventListener('scroll', () => {
     let infoText = 'X = ' + window.scrollX;
@@ -7,10 +6,13 @@ window.addEventListener('scroll', () => {
     scrollInfo.innerHTML = infoText;
 })
 
-function movePageto(){
-    for(var i = 0 ; i < Profile.scrollHeight-(793-755); i++){
-        window.scrollTo(0, i);
-    
-    }
-    window.scrollTo(0, Profile.scrollHeight-(793-755));
+function movePageto(moveto){
+    var moveto;
+    if(moveto=='move1') moveto = 716.7999877929688;
+    else if(moveto=='move2') moveto = 1516.800048828125;
+    else if(moveto=='move3') moveto = 2325.60009765625;
+    window.scroll({
+        top: moveto,
+        behavior:'smooth'
+    })
 }
