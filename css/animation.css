@@ -1,15 +1,16 @@
-@keyframes fateOut{
-    0% {
-        background-color: aliceblue;
-        color:black;
+@keyframes moving-text-1{
+    0%{
+        transform: translate(0,120%);
     }
-    30% {
-        background-color: aliceblue;
-        color:black;
+    
+    40%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: translate(0,0);
     }
     100%{
-        background-color: rgba(240, 248, 255, 0);
-        color:rgba(0, 0, 0, 0);
+        transform: translate(0,-120%);
     }
 }
 

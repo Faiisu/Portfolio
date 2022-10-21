@@ -1,10 +1,11 @@
 *{
     padding:0;
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'angsana new';
     font-size: 20px;
     scroll-behavior: smooth;
 }
+
 
 body{
     background-color: rgb(250, 216, 172);
@@ -27,7 +28,7 @@ header{
 #SelectContant{
     justify-content: space-between;
     display: flex;
-    padding:1rem;
+    padding:0.4rem;
     padding-left: 4rem;
     padding-right: 4rem;
 }
@@ -44,15 +45,17 @@ header{
 .container{
     background-color: rgb(250, 216, 172);
     height: 720px;
-    text-align: center;
-    align-items: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 #firstText{
-    margin: auto;
+    width: 100%;
+    height: 20%;
     font-weight: 1800;
     font-size: 100px;
+    overflow:hidden;
+    position:relative;
 }
 
 #startText{
@@ -116,4 +119,35 @@ header{
     background-color: rgb(230, 23, 23);
     width: 50px;
     height: 50px;
+}
+
+.font-larger{
+    font-size: larger;
+}
+
+.ani-moving-y-1{
+    transform:translate(0,120%);
+    animation-name: moving-text-1;
+    animation-duration: 8s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.ani-delay-4s{
+    animation-delay: 4s;
+}
+.ani-delay-8s{
+    animation-delay: 8s;
+}
+
+.child-middle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:auto;
+}
+
+.text-center{
+    text-align: center;
 }
