@@ -24,6 +24,7 @@ header{
 .boxct_inside_container{
     width: 100%;
     text-align: center;
+    overflow-x: hidden;
     /* margin-left: auto;
     margin-right: auto; */
 }
@@ -186,10 +187,6 @@ header{
     align-content: center;
 }
 
-#ActivityHeader{
-
-}
-
 #MyProfile{
     background-color: #393E46;
 }
@@ -284,4 +281,41 @@ header{
 
 .bg-black{
     background-color:black;
+}
+
+.transition_test{
+    transform: translate(0,0);
+}
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.slide-in{
+    
+}
+
+.from-left{
+    grid-column: 2/3;
+    transform: translateX(-100%);
+}
+
+.from-right{
+    grid-column: 3/4;
+    transform: translateX(100%);
+}
+
+.from-left,
+.from-right{
+    transition: transform 800ms ease-in;
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
 }

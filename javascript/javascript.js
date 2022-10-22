@@ -1,7 +1,6 @@
 let scrollTrack = document.getElementById("pageTracker");
-
-//on open webside
-let HelloWorld = document.getElementById("HelloWorld");
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
 
 function getWidth() {
     return Math.max(
@@ -17,14 +16,13 @@ function getHeight() {
   
 // console.log('Width:  ' +  getWidth() );
 // console.log('Height: ' + getHeight() );
-const rect = document.getElementById("MyProfile").getBoundingClientRect();
 
 window.addEventListener("scroll", function(){
     scrollTrack.style.width = window.scrollY/(document.body.scrollHeight-770) * getWidth() + "px";
-
     if(this.window.scrollX > 716.7999877929688);
+    // this.document.getElementById("firstText").style.transform = `translate(0,${a}%)`;
+});
 
-})
 
 function movePageto(moveto){
     var moveat;
@@ -40,20 +38,27 @@ function changeWord(thatId, changeTo){
     _Element.innerHTML = changeTo;
 }
 
-// var SecondSayHi = document.getElementById("SecondSayHi");
-// var ThirdSayHi = document.getElementById("ThirdSayHi");
-// var FirstContainer = document.getElementById("FirstTextContainer")
+const appearOption = {
+    threshold: 0,
+    rootMargin: "0px 0px -200px  0px"
+};
 
-// SecondSayHi.addEventListener("animationend",()=>{
-//     SecondSayHi.remove();
-// })
-// ThirdSayHi.addEventListener("animationend",()=>{
-//     ThirdSayHi.remove();
-//     window.scrollTo(0,document.querySelector("#MyProfile").getBoundingClientRect().top+window.scrollY);
-// })
+const appearOnScroll = new IntersectionObserver((entries,appearOnScroll)=>{
+    entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            return;
+        }
+        else{
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+        }
+    })
+},appearOption)
 
-// ThirdSayHi.addEventListener("animationiteration",()=>{
-//     ThirdSayHi.remove();
-//     FirstContainer.remove();
-//     window.scrollTo(0,document.querySelector("#MyProfile").getBoundingClientRect().top+window.scrollY);
-// })
+faders.forEach(fader =>{
+    appearOnScroll.observe(fader);
+})
+
+sliders.forEach(slider =>{
+    appearOnScroll.observe(slider);
+})
