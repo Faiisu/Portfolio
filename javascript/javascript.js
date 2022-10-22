@@ -28,7 +28,7 @@ window.addEventListener("scroll", function(){
 
 function movePageto(moveto){
     var moveat;
-    if(moveto == "move1") moveat = document.querySelector("#MyProfile").getBoundingClientRect().top;
+    if(moveto == "move1") moveat = document.querySelector("#FirstTextContainer").getBoundingClientRect().top;
     if(moveto == "move2") moveat = document.querySelector("#Activity").getBoundingClientRect().top;
     if(moveto == "move3") moveat = document.querySelector("#Certificate").getBoundingClientRect().top;
 
@@ -40,12 +40,20 @@ function changeWord(thatId, changeTo){
     _Element.innerHTML = changeTo;
 }
 
-var SecondSayHi = document.getElementById("SecondSayHi");
-var ThirdSayHi = document.getElementById("ThirdSayHi");
-SecondSayHi.addEventListener("animationend",()=>{
-    SecondSayHi.remove();
-})
-ThirdSayHi.addEventListener("animationend",()=>{
-    ThirdSayHi.remove();
-    window.scrollTo(0,document.querySelector("#MyProfile").getBoundingClientRect().top+window.scrollY);
-})
+// var SecondSayHi = document.getElementById("SecondSayHi");
+// var ThirdSayHi = document.getElementById("ThirdSayHi");
+// var FirstContainer = document.getElementById("FirstTextContainer")
+
+// SecondSayHi.addEventListener("animationend",()=>{
+//     SecondSayHi.remove();
+// })
+// ThirdSayHi.addEventListener("animationend",()=>{
+//     ThirdSayHi.remove();
+//     window.scrollTo(0,document.querySelector("#MyProfile").getBoundingClientRect().top+window.scrollY);
+// })
+
+// ThirdSayHi.addEventListener("animationiteration",()=>{
+//     ThirdSayHi.remove();
+//     FirstContainer.remove();
+//     window.scrollTo(0,document.querySelector("#MyProfile").getBoundingClientRect().top+window.scrollY);
+// })

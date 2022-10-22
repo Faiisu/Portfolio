@@ -1,24 +1,40 @@
 @keyframes moving-text-1{
     0%{
-        transform: translate(0,120%);
+        transform: translate(-120%,0);
     }
     
-    40%{
-        transform: translate(0,0);
-    }
-    60%{
-        transform: translate(0,0);
-    }
     100%{
-        transform: translate(0,-120%);
+        transform: translate(0,0);
     }
 }
 
 .blocOnHeader:hover{
-    color: rgba(0, 0, 0, 0.227);
+    color: #393E46;
 }
 
 button:hover{
     cursor:pointer;
     text-decoration: underline;
 }
+
+/* ScrollBarStyle */
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
