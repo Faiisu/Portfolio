@@ -54,7 +54,8 @@ header{
 #contract{
     background-color: rgba(0, 213, 255, 0.853);
     border-radius: 5px;
-    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .bg-show{
