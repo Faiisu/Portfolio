@@ -9,6 +9,12 @@
     animation-fill-mode: forwards;
 }
 
+.space{
+    width: 100vw;
+    height: 50px;
+    background-color: #393E46;
+}
+
 
 body{
     background-color: #00ADB5;
@@ -22,6 +28,10 @@ header{
     text-align: center;
     position:fixed;
     z-index: 999;
+}
+
+#Certificate{
+    background-color: rgb(210, 213, 216);
 }
 
 #header2{
