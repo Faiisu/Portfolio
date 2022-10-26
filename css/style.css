@@ -5,6 +5,8 @@
     font-size: 20px;
     scroll-behavior: smooth;
     color:white;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 
@@ -18,6 +20,16 @@ header{
     width: 100vw;
     height: 50px;
     text-align: center;
+    position:fixed;
+    z-index: 999;
+}
+
+#header2{
+    background-color: #222831;
+    width: 100vw;
+    height: 50px;
+    text-align: center;
+    
     /* position:fixed; */
 }
 
@@ -281,45 +293,4 @@ header{
 
 .bg-black{
     background-color:black;
-}
-
-.transition_test{
-    transform: translate(0,0);
-}
-
-.fade-in{
-    opacity: 0;
-    transition: opacity 250ms ease-in;
-    -webkit-transition: opacity 250ms ease-in;
-}
-
-.fade-in.appear {
-    opacity: 1;
-}
-
-.slide-in{
-    
-}
-
-.from-left{
-    grid-column: 2/3;
-    transform: translateX(-100%);
-}
-
-.from-right{
-    grid-column: 3/4;
-    transform: translateX(100%);
-}
-
-.from-left,
-.from-right{
-    transition:opacity 250ms ease-in, transform 200ms ease-in;
-    -webkit-transition:opacity 250ms ease-in, transform 200ms ease-in;
-    opacity: 0;
-}
-
-.from-left.appear,
-.from-right.appear {
-    transform: translateX(0);
-    opacity: 1;
 }

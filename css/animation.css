@@ -22,19 +22,69 @@ button:hover{
 /* width */
 ::-webkit-scrollbar {
     /* width: 0px; */
-  }
+}
   
   /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
+}
   
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
+}
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
+
+.fade-in{
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+  -webkit-transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.slide-in{
+  
+}
+
+.from-left{
+  grid-column: 2/3;
+  transform: translateX(-100%);
+}
+
+.from-right{
+  grid-column: 3/4;
+  transform: translateX(100%);
+}
+
+.from-left,
+.from-right{
+  transition:opacity 250ms ease-in, transform 200ms ease-in;
+  -webkit-transition:opacity 250ms ease-in, transform 200ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.header_slide_down{
+  transform: translateY(-120%);
+  opacity: 0;
+  transition:opacity 250ms ease-in, transform 250ms ease-in;
+  -webkit-transition:opacity 250ms ease-in, transform 250ms ease-in;
+}
+
+.go_down.appear{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
