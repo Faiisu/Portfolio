@@ -25,22 +25,24 @@ window.addEventListener("scroll", function(){
     
     var now_y_pos_scroll = window.scrollY;
     if(now_y_pos_scroll > y_pos_scrollY){
-        console.log("scrollDown");
         header_popup.classList.remove("appear");
         y_pos_scrollY = now_y_pos_scroll;
+        // console.log("scrollDown");
     }
-    else if(now_y_pos_scroll < y_pos_scrollY){
-        console.log("scrollUp");
-        header_popup.classList.add("appear");
+    if(now_y_pos_scroll < y_pos_scrollY){
+        // console.log("scrollUp");
+        if(this.window.scrollY > 700){
+            header_popup.classList.add("appear");
+        }
         y_pos_scrollY = now_y_pos_scroll;
     }
-    console.log(y_pos_scrollY);
+    console.log(window.scrollY);
     // this.document.getElementById("firstText").style.transform = `translate(0,${a}%)`;
 });
 
 function movePageto(moveto){
     var moveat;
-    if(moveto == "move1") moveat = document.querySelector("#FirstTextContainer").getBoundingClientRect().top;
+    if(moveto == "move1") moveat = document.querySelector("#MyProfile").getBoundingClientRect().top;
     if(moveto == "move2") moveat = document.querySelector("#Activity").getBoundingClientRect().top;
     if(moveto == "move3") moveat = document.querySelector("#Certificate").getBoundingClientRect().top;
 
